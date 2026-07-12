@@ -1,7 +1,7 @@
 {
   description = "Build the site";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/23.11";
+    nixpkgs.url = "github:nixos/nixpkgs/26.05";
   };
   outputs = inputs: with inputs; let
     system = "x86_64-linux";
@@ -45,7 +45,7 @@
 
     # The build environment
     env = pkgs.bundlerEnv {
-      name = "blog";
+      name = "site";
       ruby = pkgs.ruby;
       gemdir = ./.;
     };
@@ -57,6 +57,7 @@
         runtimeInputs = with pkgs; [
           gnumake
           bundler
+          stdenv.cc 
         ] ++ add_deps;
       };
     in {
