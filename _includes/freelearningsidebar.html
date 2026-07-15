@@ -1,17 +1,17 @@
 <div style="flex: 0 0 250px; background-color: #f5f5f5; padding: 20px; border-right: 1px solid #ddd;" id="free-learning-sidebar">
-    <div style="display: flex; flex: 0 0 33.33%; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-        <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;" onclick="document.getElementById('sidebar-content').style.display = document.getElementById('sidebar-content').style.display === 'none' ? 'block' : 'none';">&#9776;</button>
+    <div style="display: flex; flex: 0 0 250px; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+        <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;" onclick="document.getElementById('sidebar-content').style.display = document.getElementById('sidebar-content').style.display === 'none' ? 'block' : 'none'; document.getElementById('free-learning-sidebar').style.flex = document.getElementById('free-learning-sidebar').style.flex === '0 0 250px' ? '0 0 50px' : '0 0 250px';">&#9776;</button>
     </div>
     <div id="sidebar-content" style="display: block;">
     <h2>Free Learning Resources</h2>
     <ul>
     {% for domain in site.data.freelearning.domains %}
       <li>
-        <a href="freelearning/{{ domain.id }}">{{ domain.id }}</a>
+        <h3><a href="freelearning/{{ domain.id }}">{{ domain.id }}</a></h3>
         <ul>
           {% for field in domain.fields %}
             <li>
-              <a href="freelearning/{{ domain.id }}/{{ field.id }}">{{ field.id }}</a>
+              <h4><a href="freelearning/{{ domain.id }}/{{ field.id }}">{{ field.id }}</a></h4>
               <ul>
                 {% for topic in field.topics %}
                   <li><a href="freelearning/{{ domain.id }}/{{ field.id }}/{{ topic.id }}">{{ topic.id }}</a></li>
