@@ -1,3 +1,6 @@
+###
+### TODO: command to run that will make a .html page, folders for categories, etc, with liquid from a template for the purposes of adding new categories of shit to the wiki of free learning resources
+###
 {
   description = "Build the site";
   inputs = {
