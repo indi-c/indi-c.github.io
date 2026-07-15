@@ -9,11 +9,11 @@
       <li>
         <h3><a href="freelearning/{{ domain.id }}">{{ domain.id }}</a></h3>
         <ul>
-          {% for field in domain.fields %}
+          {% for field in site.data.freelearning.fields %}
             <li>
               <h4><a href="freelearning/{{ domain.id }}/{{ field.id }}">{{ field.id }}</a></h4>
               <ul>
-                {% for topic in field.topics %}
+                {% for topic in site.data.freelearning.topics %}
                   <li><a href="freelearning/{{ domain.id }}/{{ field.id }}/{{ topic.id }}">{{ topic.id }}</a></li>
                 {% endfor %}
               </ul>
