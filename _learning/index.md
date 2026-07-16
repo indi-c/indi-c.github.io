@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: freelearningdefault
 title: Free Learning Repository
 permalink: /freelearning/
 ---
