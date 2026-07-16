@@ -35,6 +35,7 @@ plugins:
 collections:
   learning:
     output: true
+    permalink: /learning/:path/
 
 # Exclude from processing.
 # The following items will not be processed, by default.
