@@ -1,5 +1,5 @@
 - id: web
-  field: programming
+  domain: programming
   title: web development
   brief: Learn how to build websites and web applications using HTML, CSS, JavaScript, and other web technologies.
   description: Web development is the process of creating websites and web applications. It involves a combination of programming languages, frameworks, and tools to build functional and visually appealing web experiences. This field covers both front-end development (what users see) and back-end development (server-side logic and databases).

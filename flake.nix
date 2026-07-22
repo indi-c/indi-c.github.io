@@ -68,6 +68,20 @@
       program = "${exec}/bin/${name}";
     };
 
+    # python environment for running scripts
+    python_env = pkgs.python3.withPackages (ps: with ps; [
+      pyyaml
+    ]);
+
+    simple_python_script = name: add_deps: text: let
+      exec = pkgs.writeShellApplication {
+        inherit name text;
+      };
+      in {
+        type = "app";
+        program = "${exec}/bin/${name}";
+      };
+
   in {
     apps.${system} = {
       # nix run -> serves the website locally
@@ -96,6 +110,13 @@
         bundler package
         bundix --magic
         rm -rf vendor
+      '';
+
+      # nix run .#genFreeLearning -> run a python script to generate pages for free learning resources
+
+      genFreeLearning = simple_python_script "genFreeLearning" [] ''
+        set -e
+        ${python_env}/bin/python3 genpages.py
       '';
     };
   };
