@@ -7,14 +7,14 @@
     <ul>
     {% for domain in site.data.freelearning.domains %}
       <li>
-        <h3><a href="{ domain.id | relative_url }}">{{ domain.id }}</a></h3>
+        <h3><a href="{{ domain.id | absolute_url }}">{{ domain.id }}</a></h3>
         <ul>
           {% for field in site.data.freelearning.fields %}
             <li>
-              <h4><a href="{{ domain.id }}/{{ field.id | relative_url }}">{{ field.id }}</a></h4>
+              <h4><a href="{{ domain.id }}/{{ field.id | absolute_url }}">{{ field.id }}</a></h4>
               <ul>
                 {% for topic in site.data.freelearning.topics %}
-                  <li><a href="{{ domain.id }}/{{ field.id }}/{{ topic.id | relative_url }}">{{ topic.id }}</a></li>
+                  <li><a href="{{ domain.id }}/{{ field.id }}/{{ topic.id | absolute_url }}">{{ topic.id }}</a></li>
                 {% endfor %}
               </ul>
             </li>
