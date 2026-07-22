@@ -25,7 +25,7 @@ title: {title}
 ---
 '''
 
-# make a new file for each domain in _learning/domains/ by the name of the domain id 
+# make a new file for each domain in _learning/ by the name of the domain id 
 # by using the html_template and filling in the title with the domain title
 # append the freelearningcontent include for each field in the domain to the file, 
 # with the url being the field id and the title being the field title and the description being the field description
@@ -38,7 +38,7 @@ for domain in domains:
     # make a new folder for each domain in _learning/ by the name of the domain id
     os.makedirs(f'_learning/{domain_id}', exist_ok=True)
 
-    with open(f'_learning/domains/{domain_id}.html', 'w') as f:
+    with open(f'_learning/{domain_id}.html', 'w') as f:
         f.write(html_template.format(title=domain_title))
         for field in domain_fields:
             field_id = field['id']
