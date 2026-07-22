@@ -4,28 +4,26 @@
     </div>
     <div id="sidebar-content" style="display: block;">
     <h2>Free Learning Resources</h2>
-    <ul style="list-style-type: '⇛';">
+    <ul style="list-style-type: none;">
     {% for domain in site.data.freelearning.domains %}
       <li>
-        <div style="display: flex; align-items: left; justify-content: space-between;">
-          <span style="cursor: pointer;" onclick="document.getElementById('field-list-{{ domain.id }}').style.display = document.getElementById('field-list-{{ domain.id }}').style.display === 'none' ? 'block' : 'none';">&#9654;</span>
-          <h3><a href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a></h3>
+        <div onmouseover="document.getElementById('field-list-{{ domain.id }}').style.display = document.getElementById('field-list-{{ domain.id }}').style.display === 'none' ? 'block' : 'none';" style="display: flex; align-items: left; justify-content: space-between;">
+          <a href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
         </div>
-        <ul id="field-list-{{ domain.id }}" style="list-style-type: '⇒'; display: none;">
+        <ul id="field-list-{{ domain.id }}" style="list-style-type: none; display: none;">
           {% for field in site.data.freelearning.fields %}
             <li>
-              <div style="display: flex; align-items: left; justify-content: space-between;">
-                <span style="cursor: pointer;" onclick="document.getElementById('topic-list-{{ field.id }}').style.display = document.getElementById('topic-list-{{ field.id }}').style.display === 'none' ? 'block' : 'none';">&#9654;</span>
-                <h4><a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a></h4>
+              <div onmouseover="document.getElementById('topic-list-{{ field.id }}').style.display = document.getElementById('topic-list-{{ field.id }}').style.display === 'none' ? 'block' : 'none';" style="display: flex; align-items: left; justify-content: space-between;">
+                <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
               </div>
-              <ul id="topic-list-{{ field.id }}" style="list-style-type: '→'; display: none;">
+              <ul id="topic-list-{{ field.id }}" style="list-style-type: none; display: none;">
                 {% for topic in site.data.freelearning.topics %}
                   <li><a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | append: '/' | append: topic.id | absolute_url }}">{{ topic.title }}</a></li>
                 {% endfor %}
               </ul>
             </li>
           {% endfor %}
-        </ul>
+        </ul>▶
       </li>
     {% endfor %}
   </ul>
