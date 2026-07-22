@@ -11,10 +11,10 @@
         <ul>
           {% for field in site.data.freelearning.fields %}
             <li>
-              <h4><a href="{{ domain.id }}/{{ field.id | absolute_url }}">{{ field.id }}</a></h4>
+              <h4><a href="{{ (domain.id | append: '/' | append: field.id) | absolute_url }}">{{ field.id }}</a></h4>
               <ul>
                 {% for topic in site.data.freelearning.topics %}
-                  <li><a href="{{ domain.id }}/{{ field.id }}/{{ topic.id | absolute_url }}">{{ topic.id }}</a></li>
+                  <li><a href="{{ (domain.id | append: '/' | append: field.id | append: '/' | append: topic.id) | absolute_url }}">{{ topic.id }}</a></li>
                 {% endfor %}
               </ul>
             </li>
