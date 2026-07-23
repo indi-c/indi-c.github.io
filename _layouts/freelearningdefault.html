@@ -4,9 +4,20 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <div style="display: flex; flex-direction: row; min-height: 100vh;">
-        {% include freelearningsidebar.html %}
-        <div style="flex: 1; padding: 20px;">
-            {{ content }}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+        <div id="page-header" style="background-color: #ffe2c1; padding: 20px; text-align: center;">
+            <h1>{{ page.title }}</h1>
         </div>
+        <div style="display: flex; flex-direction: row; min-height: 100vh; background-color: #d8d2c3;">
+            {% include freelearningsidebar.html %}
+            <div style="flex: 1; padding: 20px;">
+                {{ content }}
+            </div>
+        </div>
+    </body>
 </html>
