@@ -4,35 +4,54 @@
     background-color: #f5f5f5;
     padding: 20px;
     border-right: 1px solid #ddd;
+    position: relative;
+    z-index: 20;
   }
 
-  #free-learning-sidebar ul {
+  #free-learning-sidebar .menu-list {
     list-style: none;
     margin: 0;
-    padding-left: 0;
+    padding: 0;
   }
 
-  #free-learning-sidebar li {
-    margin: 6px 0;
+  #free-learning-sidebar .menu-item {
+    position: relative;
+    margin: 4px 0;
   }
 
-  #free-learning-sidebar li > a {
+  #free-learning-sidebar .menu-link {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
     color: inherit;
     text-decoration: none;
   }
 
-  #free-learning-sidebar li > a:hover {
-    text-decoration: underline;
+  #free-learning-sidebar .menu-item:hover > .menu-link {
+    background-color: #e8e8e8;
   }
 
-  #free-learning-sidebar .child-list {
+  #free-learning-sidebar .submenu {
     display: none;
-    padding-left: 16px;
-    margin-top: 4px;
+    position: absolute;
+    top: 0;
+    left: calc(100% + 8px);
+    width: 240px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    padding: 10px;
   }
 
-  #free-learning-sidebar .has-children:hover > .child-list {
+  #free-learning-sidebar .menu-item:hover > .submenu {
     display: block;
+  }
+
+  #free-learning-sidebar .menu-item.has-children > .menu-link::after {
+    content: "\203A";
+    float: right;
+    font-size: 16px;
   }
 </style>
 
@@ -43,20 +62,20 @@
 
   <div id="sidebar-content" style="display: block;">
     <h2>Free Learning Resources</h2>
-    <ul>
+    <ul class="menu-list">
       {% for domain in site.data.freelearning.domains %}
-      <li class="has-children">
-        <a href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
-        <ul class="child-list">
+      <li class="menu-item has-children">
+        <a class="menu-link" href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
+        <ul class="menu-list submenu">
           {% assign domain_fields = site.data.freelearning.fields | where: "domain", domain.id %}
           {% for field in domain_fields %}
-          <li class="has-children">
-            <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
-            <ul class="child-list">
+          <li class="menu-item has-children">
+            <a class="menu-link" href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
+            <ul class="menu-list submenu">
               {% assign field_topics = site.data.freelearning.topics | where: "field", field.id %}
               {% for topic in field_topics %}
-              <li>
-                <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | append: '/' | append: topic.id | absolute_url }}">{{ topic.title }}</a>
+              <li class="menu-item">
+                <a class="menu-link" href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | append: '/' | append: topic.id | absolute_url }}">{{ topic.title }}</a>
               </li>
               {% endfor %}
             </ul>
