@@ -27,8 +27,12 @@
         </style>
     </head>
     <body>
-        <div id="page-header" style="background-color: #2b303a; color: #fbfbff; padding: 20px; text-align: center;">
-            <h1>{{ page.title }}</h1>
+        <div id="page-header" style="background-color: #2b303a; color: #fbfbff; padding: 20px;">
+            <!-- have the page title in the centre and the name of the website on the left. The name of the site acts as a link to the home page-->
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="{{ '/learning' | relative_url }}" style="color: #fbfbff; text-decoration: none; font-size: 24px;">Indi-C</a>
+                <h1 style="margin: 0;">{{ page.title }}</h1>
+            </div>
         </div>
         <div style="display: flex; flex-direction: row; min-height: 100vh; background-color: #fbfbff;">
             {% include freelearningsidebar.html %}
