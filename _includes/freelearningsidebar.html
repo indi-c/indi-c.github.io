@@ -1,31 +1,70 @@
-<div style="flex: 0 0 250px; background-color: #f5f5f5; padding: 20px; border-right: 1px solid #ddd;" id="free-learning-sidebar">
-    <div style="display: flex; flex: 0 0 250px; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-        <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;" onclick="document.getElementById('sidebar-content').style.display = document.getElementById('sidebar-content').style.display === 'none' ? 'block' : 'none'; document.getElementById('free-learning-sidebar').style.flex = document.getElementById('free-learning-sidebar').style.flex === '0 0 250px' ? '0 0 50px' : '0 0 250px';">&#9776;</button>
-    </div>
-    <div id="sidebar-content" style="display: block;">
+<style>
+  #free-learning-sidebar {
+    flex: 0 0 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+  }
+
+  #free-learning-sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  #free-learning-sidebar li {
+    margin: 6px 0;
+  }
+
+  #free-learning-sidebar li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #free-learning-sidebar li > a:hover {
+    text-decoration: underline;
+  }
+
+  #free-learning-sidebar .child-list {
+    display: none;
+    padding-left: 16px;
+    margin-top: 4px;
+  }
+
+  #free-learning-sidebar .has-children:hover > .child-list {
+    display: block;
+  }
+</style>
+
+<div id="free-learning-sidebar">
+  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+    <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;" onclick="document.getElementById('sidebar-content').style.display = document.getElementById('sidebar-content').style.display === 'none' ? 'block' : 'none'; document.getElementById('free-learning-sidebar').style.flex = document.getElementById('free-learning-sidebar').style.flex === '0 0 250px' ? '0 0 50px' : '0 0 250px';">&#9776;</button>
+  </div>
+
+  <div id="sidebar-content" style="display: block;">
     <h2>Free Learning Resources</h2>
-    <ul style="list-style-type: none;">
-    {% for domain in site.data.freelearning.domains %}
-      <li>
-        <div onmouseover="document.getElementById('field-list-{{ domain.id }}').style.display = document.getElementById('field-list-{{ domain.id }}').style.display === 'none' ? 'block' : 'none';" style="display: flex; align-items: left; justify-content: space-between;">
-          <a href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
-        <ul id="field-list-{{ domain.id }}" style="list-style-type: none; display: none;">
-          {% for field in site.data.freelearning.fields %}
-            <li>
-              <div onmouseover="document.getElementById('topic-list-{{ field.id }}').style.display = document.getElementById('topic-list-{{ field.id }}').style.display === 'none' ? 'block' : 'none';" style="display: flex; align-items: left; justify-content: space-between;">
-                <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
-              <ul id="topic-list-{{ field.id }}" style="list-style-type: none; display: none;">
-                {% for topic in site.data.freelearning.topics %}
-                  <li><a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | append: '/' | append: topic.id | absolute_url }}">{{ topic.title }}</a></li>
-                {% endfor %}
-              </ul>
-              </div>
-            </li>
+    <ul>
+      {% for domain in site.data.freelearning.domains %}
+      <li class="has-children">
+        <a href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
+        <ul class="child-list">
+          {% assign domain_fields = site.data.freelearning.fields | where: "domain", domain.id %}
+          {% for field in domain_fields %}
+          <li class="has-children">
+            <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
+            <ul class="child-list">
+              {% assign field_topics = site.data.freelearning.topics | where: "field", field.id %}
+              {% for topic in field_topics %}
+              <li>
+                <a href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | append: '/' | append: topic.id | absolute_url }}">{{ topic.title }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
           {% endfor %}
-        </ul>▶
-        </div>
+        </ul>
       </li>
-    {% endfor %}
-  </ul>
+      {% endfor %}
+    </ul>
   </div>
 </div>
