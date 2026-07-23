@@ -19,8 +19,16 @@
     margin: 4px 0;
   }
 
+  #free-learning-sidebar .menu-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
   #free-learning-sidebar .menu-link {
     display: block;
+    flex: 1;
     padding: 8px 12px;
     border-radius: 6px;
     color: inherit;
@@ -35,13 +43,23 @@
     display: none;
     position: absolute;
     top: 0;
-    left: calc(100% + 8px);
+    left: 100%;
     width: 240px;
     background-color: #ffffff;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     padding: 10px;
+  }
+
+  /* Hover bridge prevents submenu flicker when crossing between tiers. */
+  #free-learning-sidebar .submenu::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 12px;
+    height: 100%;
   }
 
   #free-learning-sidebar .menu-item:hover > .submenu {
@@ -52,6 +70,62 @@
     content: "\203A";
     float: right;
     font-size: 16px;
+  }
+
+  #free-learning-sidebar .submenu-toggle {
+    display: none;
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    border-radius: 6px;
+    padding: 2px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    line-height: 1.4;
+  }
+
+  @media (max-width: 900px) {
+    #free-learning-sidebar {
+      flex: 0 0 100%;
+      border-right: 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    #free-learning-sidebar .menu-item {
+      margin: 2px 0;
+    }
+
+    #free-learning-sidebar .menu-item.has-children > .menu-link::after {
+      content: "";
+    }
+
+    #free-learning-sidebar .submenu-toggle {
+      display: inline-block;
+    }
+
+    #free-learning-sidebar .submenu {
+      position: static;
+      left: auto;
+      top: auto;
+      width: auto;
+      border: 0;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 0 0 0 14px;
+      margin-top: 4px;
+      background: transparent;
+    }
+
+    #free-learning-sidebar .submenu::before {
+      display: none;
+    }
+
+    #free-learning-sidebar .menu-item:hover > .submenu {
+      display: none;
+    }
+
+    #free-learning-sidebar .menu-item.mobile-open > .submenu {
+      display: block;
+    }
   }
 </style>
 
@@ -65,12 +139,18 @@
     <ul class="menu-list">
       {% for domain in site.data.freelearning.domains %}
       <li class="menu-item has-children">
-        <a class="menu-link" href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
+        <div class="menu-row">
+          <a class="menu-link" href="{{ "learning/" | append: domain.id | absolute_url }}">{{ domain.title }}</a>
+          <button class="submenu-toggle" type="button" aria-label="Toggle {{ domain.title }}" aria-expanded="false">+</button>
+        </div>
         <ul class="menu-list submenu">
           {% assign domain_fields = site.data.freelearning.fields | where: "domain", domain.id %}
           {% for field in domain_fields %}
           <li class="menu-item has-children">
-            <a class="menu-link" href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
+            <div class="menu-row">
+              <a class="menu-link" href="{{ "learning/" | append: domain.id | append: '/' | append: field.id | absolute_url }}">{{ field.title }}</a>
+              <button class="submenu-toggle" type="button" aria-label="Toggle {{ field.title }}" aria-expanded="false">+</button>
+            </div>
             <ul class="menu-list submenu">
               {% assign field_topics = site.data.freelearning.topics | where: "field", field.id %}
               {% for topic in field_topics %}
@@ -87,3 +167,56 @@
     </ul>
   </div>
 </div>
+
+<script>
+  (function () {
+    var sidebar = document.getElementById('free-learning-sidebar');
+    if (!sidebar) {
+      return;
+    }
+
+    function setItemOpenState(item, isOpen) {
+      item.classList.toggle('mobile-open', isOpen);
+      var toggle = item.querySelector(':scope > .menu-row > .submenu-toggle');
+      if (toggle) {
+        toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggle.textContent = isOpen ? '-' : '+';
+      }
+    }
+
+    function closeItemAndDescendants(item) {
+      setItemOpenState(item, false);
+      var descendants = item.querySelectorAll('.menu-item.mobile-open');
+      descendants.forEach(function (descendant) {
+        setItemOpenState(descendant, false);
+      });
+    }
+
+    var toggles = sidebar.querySelectorAll('.submenu-toggle');
+    toggles.forEach(function (toggle) {
+      toggle.addEventListener('click', function (event) {
+        var item = event.currentTarget.closest('.menu-item');
+        if (!item) {
+          return;
+        }
+
+        var shouldOpen = !item.classList.contains('mobile-open');
+        var parentList = item.parentElement;
+        if (parentList) {
+          var siblingItems = parentList.querySelectorAll(':scope > .menu-item.mobile-open');
+          siblingItems.forEach(function (sibling) {
+            if (sibling !== item) {
+              closeItemAndDescendants(sibling);
+            }
+          });
+        }
+
+        if (shouldOpen) {
+          setItemOpenState(item, true);
+        } else {
+          closeItemAndDescendants(item);
+        }
+      });
+    });
+  })();
+</script>
