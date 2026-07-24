@@ -1,0 +1,10 @@
+- id: fullstackopen
+  topics: 
+    - html
+    - javascript
+    - react
+    - nodejs
+    - mongodb
+  title: Full Stack Open
+  brief: Learn modern web development with JavaScript, React, Node.js, and more.
+  url: https://fullstackopen.com/en/
