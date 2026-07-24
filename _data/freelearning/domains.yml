@@ -1,15 +1,15 @@
 - id: cs
   title: Computer Science
-  description: Programming, cybersecurity, algorithms, data structures, and more.
+  description: Programming and computing topics.
 
 - id: music
   title: Music
-  description: Music theory and foundational resources for learning music concepts.
+  description: Music learning topics.
 
 - id: science
   title: Science
-  description: Mathematics, biology, chemistry, and physics learning resources.
+  description: Math and science learning topics.
 
 - id: art
   title: Art
-  description: Drawing, perspective, and figure anatomy learning resources.
+  description: Drawing and art study topics.

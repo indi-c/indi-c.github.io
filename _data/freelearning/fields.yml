@@ -1,83 +1,83 @@
 - id: web
   domain: cs
   title: web development
-  brief: Learn how to build websites and web applications using HTML, CSS, JavaScript, and other web technologies.
-  description: Web development is the process of creating websites and web applications. It involves a combination of programming languages, frameworks, and tools to build functional and visually appealing web experiences. This field covers both front-end development (what users see) and back-end development (server-side logic and databases).
+  brief: Web development basics.
+  description: Frontend and backend web application development.
 
 - id: cybersecurity
   domain: cs
   title: cybersecurity
-  brief: Learn how to protect systems, networks, and data from cyber threats and attacks.
-  description: Cybersecurity is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. It involves implementing security measures, monitoring for threats, and responding to incidents to ensure the confidentiality, integrity, and availability of information.
+  brief: Cybersecurity basics.
+  description: Protecting systems, networks, and data.
 
 - id: software-development
   domain: cs
   title: software development
-  brief: Learn practical programming with modern systems and application languages.
-  description: Software development focuses on designing, building, and maintaining software applications with strong foundations in language fluency, tooling, and implementation patterns.
+  brief: Software development basics.
+  description: Building and maintaining software applications.
 
 - id: systems-programming
   domain: cs
   title: systems programming
-  brief: Learn operating systems, low-level code, and close-to-hardware software.
-  description: Systems programming covers operating systems, kernels, device interfaces, and low-level software that directly manages machine resources.
+  brief: Systems programming basics.
+  description: Low-level software, kernels, and device interfaces.
 
 - id: computer-architecture
   domain: cs
   title: computer architecture and hardware
-  brief: Learn how CPU and memory systems influence software behavior.
-  description: This field focuses on processor behavior, memory hierarchies, and architecture-level performance concepts that help programmers write efficient software.
+  brief: Computer architecture basics.
+  description: CPU, memory, and hardware performance concepts.
 
 - id: language-implementation
   domain: cs
   title: language implementation
-  brief: Learn how compilers and interpreters turn source code into execution.
-  description: Language implementation includes parsing, intermediate representations, optimization, runtime models, and execution engines.
+  brief: Language implementation basics.
+  description: Compilers, interpreters, and runtime models.
 
 - id: algorithms-and-data-structures
   domain: cs
   title: algorithms and data structures
-  brief: Learn the core algorithmic patterns and data representations of computer science.
-  description: This field develops problem-solving skill through foundational data structures, algorithm design, and complexity analysis.
+  brief: Algorithms and data structures basics.
+  description: Core structures, algorithms, and complexity.
 
 - id: computational-science
   domain: cs
   title: computational science
-  brief: Learn computational methods applied to biology and signal analysis.
-  description: Computational science applies programming and algorithms to scientific domains such as bioinformatics and digital signal processing.
+  brief: Computational science basics.
+  description: Applying programming to scientific problems.
 
 - id: music-foundations
   domain: music
   title: music foundations
-  brief: Learn conceptual and theoretical foundations of music.
-  description: Music foundations cover notation, rhythm, melody, harmony, and form as a basis for listening, analysis, and composition.
+  brief: Music foundations basics.
+  description: Notation, rhythm, melody, and harmony.
 
 - id: mathematics
   domain: science
   title: mathematics
-  brief: Learn quantitative foundations for science and engineering.
-  description: Mathematics develops symbolic, analytical, and statistical reasoning used across scientific and technical disciplines.
+  brief: Mathematics basics.
+  description: Quantitative reasoning for science and engineering.
 
 - id: life-sciences
   domain: science
   title: life sciences
-  brief: Learn biological systems from anatomy to neuroscience.
-  description: Life sciences study living organisms, from cellular and anatomical structure to behavior and neural function.
+  brief: Life sciences basics.
+  description: Biological systems from cells to behavior.
 
 - id: physical-sciences
   domain: science
   title: physical sciences
-  brief: Learn chemistry and physics as foundations of material and natural systems.
-  description: Physical sciences explain matter, energy, and interactions through chemical and physical principles and quantitative models.
+  brief: Physical sciences basics.
+  description: Chemistry and physics of matter and energy.
 
 - id: drawing-fundamentals
   domain: art
   title: drawing fundamentals
-  brief: Learn core skills in perspective and observational drawing.
-  description: Drawing fundamentals build spatial reasoning, line control, and form construction through structured visual practice.
+  brief: Drawing fundamentals basics.
+  description: Perspective, observation, and form construction.
 
 - id: figure-studies
   domain: art
   title: figure studies
-  brief: Learn figure drawing, anatomy, and human form construction.
-  description: Figure studies develop gesture, proportion, structure, and anatomical understanding for drawing the human body effectively.
+  brief: Figure studies basics.
+  description: Figure drawing, anatomy, and proportion.
