@@ -1,209 +1,209 @@
 - id: html
   field: web
   title: HTML
-  brief: HTML basics.
+  brief: Structure and mark up web pages.
   description: Page structure, tags, and semantic markup.
 
 - id: javascript
   field: web
   title: JavaScript
-  brief: JavaScript basics.
+  brief: Program interactive behavior on the web.
   description: Core language, DOM, and browser scripting.
 
 - id: react
   field: web
   title: React
-  brief: React basics.
+  brief: Build UI with components and state.
   description: Components, state, and routing.
 
 - id: nodejs
   field: web
   title: Node.js
-  brief: Node.js basics.
+  brief: Build backend services with JavaScript.
   description: Backend JavaScript, APIs, and async I/O.
 
 - id: mongodb
   field: web
   title: MongoDB
-  brief: MongoDB basics.
+  brief: Model and query document data.
   description: Documents, queries, and indexing.
 
 - id: rust
   field: software-development
   title: Rust
-  brief: Rust basics.
+  brief: Write safe, high-performance systems code.
   description: Ownership, lifetimes, and safe systems code.
 
 - id: cpp
   field: software-development
   title: C++
-  brief: C++ basics.
+  brief: Build performance-critical software in C++.
   description: Core syntax, memory, STL, and templates.
 
 - id: operating-systems
   field: systems-programming
   title: Operating Systems
-  brief: OS basics.
+  brief: Understand operating system design and internals.
   description: Processes, memory, filesystems, and kernels.
 
 - id: assembly
   field: systems-programming
   title: Assembly
-  brief: Assembly basics.
+  brief: Program at machine-instruction level.
   description: Registers, instructions, and low-level execution.
 
 - id: kernel-drivers
   field: systems-programming
   title: Kernel Drivers
-  brief: Kernel driver basics.
+  brief: Work with kernel modules and drivers.
   description: Kernel modules and device interfaces.
 
 - id: cryptography
   field: cybersecurity
   title: Cryptography
-  brief: Cryptography basics.
+  brief: Learn modern cryptographic methods.
   description: Encryption, hashing, signatures, and key exchange.
 
 - id: cpu-architecture
   field: computer-architecture
   title: CPU Architecture
-  brief: CPU architecture basics.
+  brief: Understand processor execution and trade-offs.
   description: Execution models, pipelines, and architecture trade-offs.
 
 - id: memory
   field: computer-architecture
   title: Memory
-  brief: Memory basics.
+  brief: Understand caches, latency, and memory systems.
   description: Cache, latency, bandwidth, and memory hierarchy.
 
 - id: compilers
   field: language-implementation
   title: Compilers
-  brief: Compiler basics.
+  brief: Build language frontends and code generators.
   description: Parsing, IR, optimization, and code generation.
 
 - id: interpreters
   field: language-implementation
   title: Interpreters
-  brief: Interpreter basics.
+  brief: Implement runtime language evaluation.
   description: AST evaluation and runtime behavior.
 
 - id: haskell
   field: software-development
   title: Haskell
-  brief: Haskell basics.
+  brief: Learn typed functional programming.
   description: Functional programming and type classes.
 
 - id: data-structures
   field: algorithms-and-data-structures
   title: Data Structures
-  brief: Data structures basics.
+  brief: Organize data for efficient operations.
   description: Arrays, trees, graphs, and hash tables.
 
 - id: algorithms
   field: algorithms-and-data-structures
   title: Algorithms
-  brief: Algorithms basics.
+  brief: Design efficient problem-solving methods.
   description: Design patterns, complexity, and optimization.
 
 - id: bioinformatics-algorithms
   field: computational-science
   title: Bioinformatics Algorithms
-  brief: Bioinformatics algorithms basics.
+  brief: Solve sequence and genomics problems.
   description: Sequence analysis and genomics problem solving.
 
 - id: dsp
   field: computational-science
   title: DSP
-  brief: DSP basics.
+  brief: Analyze and transform digital signals.
   description: Signals, transforms, and filtering.
 
 - id: music-theory
   field: music-foundations
   title: Music Theory
-  brief: Music theory basics.
+  brief: Understand rhythm, harmony, and notation.
   description: Notation, intervals, scales, rhythm, and harmony.
 
 - id: algebra
   field: mathematics
   title: Algebra
-  brief: Algebra basics.
+  brief: Work with equations and symbolic models.
   description: Equations, functions, and symbolic manipulation.
 
 - id: calculus
   field: mathematics
   title: Calculus
-  brief: Calculus basics.
+  brief: Model change with derivatives and integrals.
   description: Limits, derivatives, and integrals.
 
 - id: statistics
   field: mathematics
   title: Statistics
-  brief: Statistics basics.
+  brief: Analyze data and uncertainty.
   description: Probability, data analysis, and inference.
 
 - id: anatomy
   field: life-sciences
   title: Anatomy
-  brief: Anatomy basics.
+  brief: Study the structure of the human body.
   description: Human body structure and organ systems.
 
 - id: biology
   field: life-sciences
   title: Biology
-  brief: Biology basics.
+  brief: Study core principles of life.
   description: Cells, genetics, evolution, and ecology.
 
 - id: microbiology
   field: life-sciences
   title: Microbiology
-  brief: Microbiology basics.
+  brief: Study microorganisms and their systems.
   description: Microbes, physiology, and host interactions.
 
 - id: neuroscience
   field: life-sciences
   title: Neuroscience
-  brief: Neuroscience basics.
+  brief: Study the nervous system and behavior.
   description: Nervous system structure, function, and behavior.
 
 - id: chemistry
   field: physical-sciences
   title: Chemistry
-  brief: Chemistry basics.
+  brief: Study matter, bonding, and reactions.
   description: Atoms, bonding, reactions, and stoichiometry.
 
 - id: organic-chemistry
   field: physical-sciences
   title: Organic Chemistry
-  brief: Organic chemistry basics.
+  brief: Study carbon chemistry and mechanisms.
   description: Carbon compounds, functional groups, and mechanisms.
 
 - id: physics
   field: physical-sciences
   title: Physics
-  brief: Physics basics.
+  brief: Study motion, fields, and energy.
   description: Mechanics, electromagnetism, waves, and modern topics.
 
 - id: university-physics
   field: physical-sciences
   title: University Physics
-  brief: University physics track.
+  brief: Follow a calculus-based physics sequence.
   description: Calculus-based physics sequence across multiple volumes.
 
 - id: perspective
   field: drawing-fundamentals
   title: Perspective
-  brief: Perspective basics.
+  brief: Draw depth using geometric perspective.
   description: One-point, two-point, and three-point perspective.
 
 - id: drawing
   field: drawing-fundamentals
   title: Drawing
-  brief: Drawing basics.
+  brief: Practice line, form, and shading.
   description: Line, form, shading, and observation.
 
 - id: figure-drawing-anatomy
   field: figure-studies
   title: Figure Drawing
-  brief: Figure drawing basics.
+  brief: Draw the human figure with anatomy.
   description: Gesture, proportion, and anatomy.

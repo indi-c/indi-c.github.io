@@ -1,83 +1,83 @@
 - id: web
   domain: cs
   title: web development
-  brief: Web development basics.
+  brief: Build websites and web applications.
   description: Frontend and backend web application development.
 
 - id: cybersecurity
   domain: cs
   title: cybersecurity
-  brief: Cybersecurity basics.
+  brief: Protect systems, networks, and data.
   description: Protecting systems, networks, and data.
 
 - id: software-development
   domain: cs
   title: software development
-  brief: Software development basics.
+  brief: Design, build, and maintain software.
   description: Building and maintaining software applications.
 
 - id: systems-programming
   domain: cs
   title: systems programming
-  brief: Systems programming basics.
+  brief: Build software close to the hardware.
   description: Low-level software, kernels, and device interfaces.
 
 - id: computer-architecture
   domain: cs
   title: computer architecture and hardware
-  brief: Computer architecture basics.
+  brief: Understand CPU and memory behavior.
   description: CPU, memory, and hardware performance concepts.
 
 - id: language-implementation
   domain: cs
   title: language implementation
-  brief: Language implementation basics.
+  brief: Build compilers and interpreters.
   description: Compilers, interpreters, and runtime models.
 
 - id: algorithms-and-data-structures
   domain: cs
   title: algorithms and data structures
-  brief: Algorithms and data structures basics.
+  brief: Solve problems with efficient data models.
   description: Core structures, algorithms, and complexity.
 
 - id: computational-science
   domain: cs
   title: computational science
-  brief: Computational science basics.
+  brief: Apply computing methods to scientific work.
   description: Applying programming to scientific problems.
 
 - id: music-foundations
   domain: music
   title: music foundations
-  brief: Music foundations basics.
+  brief: Learn core concepts of music.
   description: Notation, rhythm, melody, and harmony.
 
 - id: mathematics
   domain: science
   title: mathematics
-  brief: Mathematics basics.
+  brief: Quantitative reasoning.
   description: Quantitative reasoning for science and engineering.
 
 - id: life-sciences
   domain: science
   title: life sciences
-  brief: Life sciences basics.
+  brief: Study biological systems and organisms.
   description: Biological systems from cells to behavior.
 
 - id: physical-sciences
   domain: science
   title: physical sciences
-  brief: Physical sciences basics.
+  brief: Study matter, energy, and physical laws.
   description: Chemistry and physics of matter and energy.
 
 - id: drawing-fundamentals
   domain: art
   title: drawing fundamentals
-  brief: Drawing fundamentals basics.
+  brief: Learn perspective and observational drawing.
   description: Perspective, observation, and form construction.
 
 - id: figure-studies
   domain: art
   title: figure studies
-  brief: Figure studies basics.
+  brief: Study figure drawing and anatomy.
   description: Figure drawing, anatomy, and proportion.
