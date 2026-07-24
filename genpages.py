@@ -35,7 +35,7 @@ color_two = "#EBF1F7"
 # also make a new folder for each domain in _learning/domains/ by the name of the domain id
 for domain in domains:
     domain_id = domain['id']
-    domain_title = domain['title']
+    domain_title = domain['title'].title()
     domain_fields = domain_to_fields[domain_id]
 
     current_color = color_one
@@ -48,7 +48,7 @@ for domain in domains:
 
         for field in domain_fields:
             field_id = field['id']
-            field_title = field['title']
+            field_title = field['title'].title()
             field_brief = field['brief']
             f.write(f'{{% include freelearningcontent.html url="{field_id}" title="{field_title}" brief="{field_brief}" color="{current_color}" %}}\n')
             current_color = color_two if current_color == color_one else color_one
@@ -57,7 +57,7 @@ for domain in domains:
 for field in fields:
     field_id = field['id']
     field_domain = field['domain']
-    field_title = field['title']
+    field_title = field['title'].title()
     field_description = field['description']
     field_topics = field_to_topics[field_id]
 
@@ -72,7 +72,7 @@ for field in fields:
         current_color = color_two if current_color == color_one else color_one
         for topic in field_topics:
             topic_id = topic['id']
-            topic_title = topic['title']
+            topic_title = topic['title'].title()
             topic_brief = topic['brief']
             f.write(f'{{% include freelearningcontent.html url="{topic_id}" title="{topic_title}" brief="{topic_brief}" color="{current_color}" %}}\n')
             current_color = color_two if current_color == color_one else color_one
@@ -82,7 +82,7 @@ resources = yaml.safe_load(open('_data/freelearning/resources.yml'))
 for topic in topics:
     topic_id = topic['id']
     topic_field = topic['field']
-    topic_title = topic['title']
+    topic_title = topic['title'].title()
     topic_description = topic['description']
     topic_resources = [resource for resource in resources if topic_id in resource['topics']]
     topic_domain = next((field['domain'] for field in fields if field['id'] == topic_field), None)
@@ -95,7 +95,7 @@ for topic in topics:
         current_color = color_two if current_color == color_one else color_one
         for resource in topic_resources:
             resource_id = resource['id']
-            resource_title = resource['title']
+            resource_title = resource['title'].title()
             resource_brief = resource['brief']
             resource_url = resource['url']
             f.write(f'{{% include freelearningcontent.html url="{resource_url}" title="{resource_title}" brief="{resource_brief}" color="{current_color}" %}}\n')
