@@ -25,18 +25,82 @@
                 color: #d45709;
                 text-decoration: none;
             }
+
+            #page-header {
+                background-color: #2b303a;
+                color: #fbfbff;
+                padding: 20px;
+            }
+
+            #page-header-content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            #free-learning-home-link {
+                color: #fbfbff;
+                text-decoration: none;
+                font-size: 24px;
+                position: absolute;
+                left: 20px;
+            }
+
+            #free-learning-page-title {
+                margin: 0;
+            }
+
+            #free-learning-layout {
+                display: flex;
+                min-height: 100vh;
+                background-color: #fbfbff;
+            }
+
+            #free-learning-main-content {
+                flex: 1;
+                min-width: 0;
+                padding: 20px;
+            }
+
+            @media (max-width: 900px), (hover: none) and (pointer: coarse) {
+                #page-header-content {
+                    align-items: flex-start;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+
+                #free-learning-home-link {
+                    position: static;
+                    font-size: 18px;
+                }
+
+                #free-learning-page-title {
+                    font-size: 1.5rem;
+                }
+
+                #free-learning-layout {
+                    flex-direction: column;
+                    min-height: 0;
+                }
+
+                #free-learning-main-content {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
         </style>
     </head>
     <body>
-        <div id="page-header" style="background-color: #2b303a; color: #fbfbff; padding: 20px;">
-            <div style="display: flex; justify-content: center; align-items: center; position: relative;">
-                <a href="{{ '/learning' | absolute_url }}" style="color: #fbfbff; text-decoration: none; font-size: 24px; position: absolute; left: 20px;">Free Learning</a>
-                <h1 style="margin: 0;">{{ page.title }}</h1>
+        <div id="page-header">
+            <div id="page-header-content">
+                <a id="free-learning-home-link" href="{{ '/learning' | absolute_url }}">Free Learning</a>
+                <h1 id="free-learning-page-title">{{ page.title }}</h1>
             </div>
         </div>
-        <div style="display: flex; flex-direction: row; min-height: 100vh; background-color: #fbfbff;">
+        <div id="free-learning-layout">
             {% include freelearningsidebar.html %}
-            <div style="flex: 1; padding: 20px;">
+            <div id="free-learning-main-content">
                 {{ content }}
             </div>
         </div>

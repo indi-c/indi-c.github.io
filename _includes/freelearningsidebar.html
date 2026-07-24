@@ -1,6 +1,7 @@
 <style>
   #free-learning-sidebar {
     flex: 0 0 250px;
+    box-sizing: border-box;
     background-color: #edf2f6;
     padding: 20px;
     position: relative;
@@ -9,6 +10,13 @@
 
   #free-learning-sidebar .sidebar-title {
     margin: 0;
+  }
+
+  #free-learning-sidebar .sidebar-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
 
   #free-learning-sidebar .sidebar-hint {
@@ -125,9 +133,14 @@
 
   @media (max-width: 900px), (hover: none) and (pointer: coarse) {
     #free-learning-sidebar {
-      flex: 0 0 100%;
+      flex: 0 0 auto;
+      width: 100%;
       border-right: 0;
       border-bottom: 1px solid #ddd;
+    }
+
+    #free-learning-sidebar:not(.sidebar-open) .sidebar-controls {
+      margin-bottom: 0;
     }
 
     #free-learning-sidebar #sidebar-content {
@@ -201,7 +214,7 @@
 </style>
 
 <div id="free-learning-sidebar">
-  <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+  <div class="sidebar-controls">
     <button id="toggle-sidebar" type="button" aria-label="Toggle learning navigation" aria-controls="sidebar-content" aria-expanded="false" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#9776;</button>
   </div>
 
