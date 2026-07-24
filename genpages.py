@@ -50,7 +50,7 @@ for domain in domains:
             field_id = field['id']
             field_title = field['title']
             field_brief = field['brief']
-            f.write(f'{{% include freelearningcontent.html url="{field_id}" title="{field_title}" description="{field_brief}" color="{current_color}" %}}\n')
+            f.write(f'{{% include freelearningcontent.html url="{field_id}" title="{field_title}" brief="{field_brief}" color="{current_color}" %}}\n')
             current_color = color_two if current_color == color_one else color_one
 
 # repeat the above for each field in _learning/fields/ by the name of the field id
@@ -68,13 +68,13 @@ for field in fields:
 
     with open(f'_learning/{field_domain}/{field_id}.html', 'w') as f:
         f.write(html_template.format(title=field_title))
-        f.write(f'{{% include freelearningcontent.html url="{field_id}" title="{field_title}" description="{field_description}" color="{current_color}" %}}\n')
+        f.write(f'{{% include freelearningcontent.html url="{field_id}" title="{field_title}" brief="{field_description}" color="{current_color}" %}}\n')
         current_color = color_two if current_color == color_one else color_one
         for topic in field_topics:
             topic_id = topic['id']
             topic_title = topic['title']
             topic_brief = topic['brief']
-            f.write(f'{{% include freelearningcontent.html url="{topic_id}" title="{topic_title}" description="{topic_brief}" color="{current_color}" %}}\n')
+            f.write(f'{{% include freelearningcontent.html url="{topic_id}" title="{topic_title}" brief="{topic_brief}" color="{current_color}" %}}\n')
             current_color = color_two if current_color == color_one else color_one
 
 # repeat the above for each topic in _learning/topics/ by the name of the topic id but populating with information from resources.yml
@@ -91,12 +91,12 @@ for topic in topics:
 
     with open(f'_learning/{topic_domain}/{topic_field}/{topic_id}.html', 'w') as f:
         f.write(html_template.format(title=topic_title))
-        f.write(f'{{% include freelearningcontent.html url="{topic_id}" title="{topic_title}" description="{topic_description}" color="{current_color}" %}}\n')
+        f.write(f'{{% include freelearningcontent.html url="{topic_id}" title="{topic_title}" brief="{topic_description}" color="{current_color}" %}}\n')
         current_color = color_two if current_color == color_one else color_one
         for resource in topic_resources:
             resource_id = resource['id']
             resource_title = resource['title']
             resource_brief = resource['brief']
             resource_url = resource['url']
-            f.write(f'{{% include freelearningcontent.html url="{resource_url}" title="{resource_title}" description="{resource_brief}" color="{current_color}" %}}\n')
+            f.write(f'{{% include freelearningcontent.html url="{resource_url}" title="{resource_title}" brief="{resource_brief}" color="{current_color}" %}}\n')
             current_color = color_two if current_color == color_one else color_one
