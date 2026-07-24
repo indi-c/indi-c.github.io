@@ -9,3 +9,201 @@
   title: JavaScript
   brief: Learn JavaScript, the programming language that enables dynamic web content.
   description: JavaScript is a programming language that enables developers to create interactive and dynamic content on websites. It is widely used for front-end development, allowing developers to manipulate the Document Object Model (DOM), handle events, and create responsive user interfaces. JavaScript is also used server-side with technologies like Node.js, making it crucial for modern full-stack web development.
+
+- id: react
+  field: web
+  title: React Frontend
+  brief: Learn component-based frontend development using React.
+  description: React frontend topics cover component design, state management, routing, and modern UI composition patterns.
+
+- id: nodejs
+  field: web
+  title: Node.js Backend
+  brief: Learn server-side JavaScript development with Node.js.
+  description: Node.js backend topics include APIs, runtime fundamentals, asynchronous I/O, and service architecture.
+
+- id: mongodb
+  field: web
+  title: MongoDB Data Modeling
+  brief: Learn document database design and querying with MongoDB.
+  description: MongoDB topics cover schema design, indexing, query patterns, and application integration.
+
+- id: rust-systems-development
+  field: software-development
+  title: Rust for Systems Development
+  brief: Learn practical Rust for building safe, high-performance software.
+  description: This topic emphasizes ownership, lifetimes, error handling, and idiomatic Rust patterns for robust systems software.
+
+- id: cpp-systems-development
+  field: software-development
+  title: C++ for Performance-Critical Software
+  brief: Learn modern C++ techniques for efficient software development.
+  description: This topic covers core C++ language features, memory control, templates, and tooling for production-grade development.
+
+- id: operating-systems-fundamentals
+  field: systems-programming
+  title: Operating Systems Fundamentals
+  brief: Learn process scheduling, memory, filesystems, and kernel principles.
+  description: This topic introduces how operating systems manage computation, memory, storage, and hardware abstraction.
+
+- id: assembly-and-machine-code
+  field: systems-programming
+  title: Assembly and Machine-Level Programming
+  brief: Learn instruction sets, registers, and low-level execution details.
+  description: This topic develops direct understanding of CPU execution through assembly language and machine-oriented debugging.
+
+- id: kernel-and-driver-development
+  field: systems-programming
+  title: Kernel and Driver Development
+  brief: Learn practical kernel-level programming and driver interfaces.
+  description: This topic focuses on writing and understanding kernel modules, device interaction, and privileged execution behavior.
+
+- id: applied-cryptography
+  field: cybersecurity
+  title: Applied Cryptography
+  brief: Learn cryptographic primitives, protocols, and practical attacks.
+  description: Cryptography topics cover encryption, hashing, signatures, key exchange, protocol design, and applied security challenges.
+
+- id: cpu-architecture
+  field: computer-architecture
+  title: CPU Architecture Concepts
+  brief: Learn processor execution models and architecture-level performance ideas.
+  description: This topic explores instruction execution, pipelines, memory access patterns, and architectural trade-offs.
+
+- id: memory-hierarchy-performance
+  field: computer-architecture
+  title: Memory Hierarchy and Performance
+  brief: Learn cache, latency, bandwidth, and memory behavior in real systems.
+  description: This topic explains how memory hierarchies and access patterns determine software performance characteristics.
+
+- id: compiler-infrastructure
+  field: language-implementation
+  title: Compiler Infrastructure
+  brief: Learn frontend and backend compiler construction with modern tooling.
+  description: This topic covers parsing, IR design, optimization pipelines, and code generation workflows.
+
+- id: interpreter-construction
+  field: language-implementation
+  title: Interpreter Construction
+  brief: Learn AST evaluation, runtime environments, and language execution models.
+  description: This topic focuses on building interpreters and understanding runtime semantics for programming languages.
+
+- id: functional-programming-with-haskell
+  field: software-development
+  title: Functional Programming with Haskell
+  brief: Learn typed functional programming and compositional design in Haskell.
+  description: This topic covers functional abstractions, type classes, and algebraic modeling for expressive software development.
+
+- id: foundational-data-structures
+  field: algorithms-and-data-structures
+  title: Foundational Data Structures
+  brief: Learn core structures such as arrays, trees, graphs, and hash tables.
+  description: This topic introduces standard data structures and their trade-offs in real problem solving.
+
+- id: algorithmic-problem-solving
+  field: algorithms-and-data-structures
+  title: Algorithmic Problem Solving
+  brief: Learn algorithm design patterns and complexity-focused reasoning.
+  description: This topic emphasizes decomposition, recurrence, optimization, and practical algorithm selection.
+
+- id: bioinformatics-algorithms
+  field: computational-science
+  title: Bioinformatics Algorithms
+  brief: Learn computational methods for sequence and genomics problems.
+  description: This topic develops algorithmic approaches to biological datasets and classic bioinformatics challenge sets.
+
+- id: digital-signal-analysis
+  field: computational-science
+  title: Digital Signal Analysis
+  brief: Learn transforms, filtering, and signal-processing workflows.
+  description: This topic introduces core DSP methods for representing, transforming, and interpreting signals.
+
+- id: harmony-and-theory
+  field: music-foundations
+  title: Harmony and Theory Fundamentals
+  brief: Learn notation, intervals, scales, rhythm, and harmonic structure.
+  description: This topic builds the conceptual language needed to analyze and compose music effectively.
+
+- id: algebra-foundations
+  field: mathematics
+  title: Algebra Foundations
+  brief: Learn algebraic structures, equations, and symbolic reasoning.
+  description: Algebra topics include expressions, equations, functions, and transformations used across mathematics and science.
+
+- id: calculus-and-analysis
+  field: mathematics
+  title: Calculus and Analysis
+  brief: Learn limits, derivatives, and integrals for modeling change.
+  description: Calculus topics include differential and integral calculus, series, and applications in physics and engineering.
+
+- id: statistics-and-probability
+  field: mathematics
+  title: Statistics and Probability
+  brief: Learn probability, data analysis, and statistical inference.
+  description: Statistics topics cover descriptive statistics, distributions, estimation, hypothesis testing, and data-driven reasoning.
+
+- id: human-anatomy
+  field: life-sciences
+  title: Human Anatomy
+  brief: Learn the structure of the human body and organ systems.
+  description: Anatomy topics examine body systems and their organization to support deeper physiological understanding.
+
+- id: general-biology-principles
+  field: life-sciences
+  title: General Biology Principles
+  brief: Learn foundational biology concepts across major life sciences themes.
+  description: General biology topics include cell biology, genetics, evolution, ecology, and organismal processes.
+
+- id: microbiology
+  field: life-sciences
+  title: Microbiology
+  brief: Learn microorganisms, microbial physiology, and host interactions.
+  description: Microbiology topics explore bacteria, viruses, fungi, and microbial systems in health and environment.
+
+- id: behavioral-neuroscience
+  field: life-sciences
+  title: Behavioral Neuroscience
+  brief: Learn nervous system structure, function, and behavior links.
+  description: Neuroscience topics connect neural mechanisms to cognition, behavior, and biological regulation.
+
+- id: general-chemistry
+  field: physical-sciences
+  title: General Chemistry
+  brief: Learn atomic theory, bonding, reactions, and stoichiometry.
+  description: General chemistry topics provide a foundation for understanding matter and chemical transformations.
+
+- id: organic-chemistry
+  field: physical-sciences
+  title: Organic Chemistry
+  brief: Learn carbon compounds, functional groups, and reaction mechanisms.
+  description: Organic chemistry topics focus on structure, reactivity, synthesis, and analysis of organic molecules.
+
+- id: general-physics
+  field: physical-sciences
+  title: General Physics
+  brief: Learn mechanics, electromagnetism, waves, and modern physics.
+  description: General physics topics cover core laws and models used to explain natural phenomena quantitatively.
+
+- id: university-physics-sequence
+  field: physical-sciences
+  title: University Physics Sequence
+  brief: Learn calculus-based university physics across a multi-volume track.
+  description: This topic follows a comprehensive university-level treatment of mechanics, electromagnetism, and modern physics.
+
+- id: perspective-construction
+  field: drawing-fundamentals
+  title: Perspective Construction
+  brief: Learn one-point, two-point, and three-point perspective drawing.
+  description: Perspective topics develop accurate spatial construction and depth representation in drawing.
+
+- id: observational-drawing
+  field: drawing-fundamentals
+  title: Observational Drawing
+  brief: Learn line, form, shading, and observational drawing skills.
+  description: Drawing topics build technical and expressive abilities through structured and repeated practice.
+
+- id: figure-drawing-anatomy
+  field: figure-studies
+  title: Figure Drawing and Anatomy
+  brief: Learn gesture, proportion, and anatomical landmarks for figure art.
+  description: Figure drawing and anatomy topics improve human form construction and dynamic, believable figure work.

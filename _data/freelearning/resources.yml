@@ -8,3 +8,269 @@
   title: Full Stack Open
   brief: Learn modern web development with JavaScript, React, Node.js, and more.
   url: https://fullstackopen.com/en/
+
+- id: openmusictheory
+  topics:
+    - harmony-and-theory
+  title: Open Music Theory
+  brief: Open textbook for foundational and intermediate music theory concepts.
+  url: https://viva.pressbooks.pub/openmusictheory/front-matter/introduction/
+
+- id: operating-systems-from-0-to-1
+  topics:
+    - operating-systems-fundamentals
+  title: Operating Systems From 0 to 1
+  brief: Practical guide to understanding operating systems from first principles.
+  url: https://github.com/tuhdo/os01/blob/master/Operating_Systems_From_0_to_1.pdf
+
+- id: cpuland
+  topics:
+    - operating-systems-fundamentals
+    - cpu-architecture
+  title: cpu.land
+  brief: Interactive explanation of how CPUs and computers execute programs.
+  url: https://cpu.land/
+
+- id: linux-device-drivers
+  topics:
+    - kernel-and-driver-development
+  title: Linux Device Drivers
+  brief: Classic reference for Linux kernel and device driver development.
+  url: https://lwn.net/Kernel/LDD3/
+
+- id: writing-an-os-in-rust
+  topics:
+    - operating-systems-fundamentals
+    - rust-systems-development
+  title: Writing an OS in Rust
+  brief: Step-by-step guide to building a small operating system in Rust.
+  url: https://os.phil-opp.com/
+
+- id: ostep
+  topics:
+    - operating-systems-fundamentals
+  title: Operating Systems Three Easy Pieces
+  brief: Comprehensive, widely used textbook for operating systems.
+  url: https://pages.cs.wisc.edu/~remzi/OSTEP/
+
+- id: uva-x86-assembly-guide
+  topics:
+    - assembly-and-machine-code
+  title: x86 Assembly Guide by University of Virginia
+  brief: Introductory guide to x86 assembly language programming.
+  url: https://www.cs.virginia.edu/~evans/cs216/guides/x86.html
+
+- id: x86-64-assembly-ubuntu
+  topics:
+    - assembly-and-machine-code
+  title: x86-64 Assembly Language Programming with Ubuntu
+  brief: PDF tutorial for x86-64 assembly language on Ubuntu systems.
+  url: http://www.egr.unlv.edu/~ed/assembly64.pdf
+
+- id: rust-book
+  topics:
+    - rust-systems-development
+  title: The Rust Programming Language Book
+  brief: Official Rust book covering the language from basics to advanced topics.
+  url: https://doc.rust-lang.org/stable/book/
+
+- id: rustlings
+  topics:
+    - rust-systems-development
+  title: Rustlings
+  brief: Small exercises to practice learning Rust.
+  url: https://rustlings.rust-lang.org/
+
+- id: rust-by-example
+  topics:
+    - rust-systems-development
+  title: Rust By Example
+  brief: Learn Rust through practical runnable examples.
+  url: https://doc.rust-lang.org/stable/rust-by-example/
+
+- id: learncpp
+  topics:
+    - cpp-systems-development
+  title: Learn C++
+  brief: Free online tutorial series for learning modern C++.
+  url: https://www.learncpp.com/
+
+- id: cryptohack
+  topics:
+    - applied-cryptography
+  title: Cryptohack
+  brief: Hands-on cryptography learning platform with challenges.
+  url: https://cryptohack.org/
+
+- id: cryptopals
+  topics:
+    - applied-cryptography
+  title: Cryptopals Crypto Challenges
+  brief: Classic challenge set for learning practical cryptography.
+  url: https://cryptopals.com/
+
+- id: joy-of-cryptography
+  topics:
+    - applied-cryptography
+  title: The Joy of Cryptography
+  brief: Open textbook introducing modern cryptography concepts.
+  url: https://joyofcryptography.com/
+
+- id: applied-cryptography-boneh-shoup
+  topics:
+    - applied-cryptography
+  title: A Graduate Course in Applied Cryptography
+  brief: Advanced applied cryptography textbook by Boneh and Shoup.
+  url: https://toc.cryptobook.us/book.pdf
+
+- id: rosalind
+  topics:
+    - bioinformatics-algorithms
+  title: Rosalind
+  brief: Bioinformatics problem-solving platform with algorithmic exercises.
+  url: https://rosalind.info/problems/locations/
+
+- id: dsp-guide
+  topics:
+    - digital-signal-analysis
+  title: The Scientist and Engineer's Guide to Digital Signal Processing
+  brief: Introductory DSP text with practical examples.
+  url: https://dspguide.com/
+
+- id: memory-performance-paper
+  topics:
+    - memory-hierarchy-performance
+  title: What Every Programmer Should Know About Memory
+  brief: Deep dive into memory hierarchy and performance considerations.
+  url: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
+
+- id: llvm-tutorial
+  topics:
+    - compiler-infrastructure
+  title: LLVM Tutorial
+  brief: Official LLVM tutorial for compiler construction workflows.
+  url: https://llvm.org/docs/tutorial/
+
+- id: crafting-interpreters
+  topics:
+    - interpreter-construction
+  title: Crafting Interpreters
+  brief: Build interpreters while learning language implementation.
+  url: https://craftinginterpreters.com/contents.html
+
+- id: learn-you-a-haskell
+  topics:
+    - functional-programming-with-haskell
+  title: Learn You a Haskell for Great Good
+  brief: Friendly introduction to Haskell and functional programming.
+  url: https://learnyouahaskell.github.io/introduction.html#so-whats-haskell
+
+- id: opendsa
+  topics:
+    - foundational-data-structures
+    - algorithmic-problem-solving
+  title: OpenDSA
+  brief: Interactive platform for data structures and algorithms.
+  url: https://opendsa-server.cs.vt.edu/ODSA/Books/Everything/html/
+
+- id: open-data-structures-cpp
+  topics:
+    - foundational-data-structures
+    - cpp-systems-development
+  title: Open Data Structures (in C++)
+  brief: Data structures textbook with C++ implementations.
+  url: https://opendatastructures.org/ods-cpp/
+
+- id: openstax-math
+  topics:
+    - algebra-foundations
+    - calculus-and-analysis
+    - statistics-and-probability
+  title: OpenStax Math
+  brief: OpenStax mathematics catalog covering algebra, calculus, and statistics.
+  url: https://openstax.org/subjects/math
+
+- id: openstax-anatomy-and-physiology-2e
+  topics:
+    - human-anatomy
+  title: OpenStax Anatomy and Physiology 2e
+  brief: Comprehensive anatomy and physiology textbook.
+  url: https://openstax.org/details/books/anatomy-and-physiology-2e
+
+- id: openstax-biology-2e
+  topics:
+    - general-biology-principles
+  title: OpenStax Biology 2e
+  brief: General biology textbook from OpenStax.
+  url: https://openstax.org/details/books/biology-2e
+
+- id: openstax-microbiology
+  topics:
+    - microbiology
+  title: OpenStax Microbiology
+  brief: Open textbook introducing microbiology principles.
+  url: https://openstax.org/details/books/microbiology
+
+- id: openstax-intro-behavioral-neuroscience
+  topics:
+    - behavioral-neuroscience
+  title: OpenStax Introduction to Behavioral Neuroscience
+  brief: Introductory neuroscience text focused on behavior.
+  url: https://openstax.org/details/books/introduction-behavioral-neuroscience
+
+- id: openstax-chemistry-2e
+  topics:
+    - general-chemistry
+  title: OpenStax Chemistry 2e
+  brief: Foundational general chemistry textbook.
+  url: https://openstax.org/details/books/chemistry-2e
+
+- id: openstax-organic-chemistry
+  topics:
+    - organic-chemistry
+  title: OpenStax Organic Chemistry
+  brief: Open textbook for organic chemistry fundamentals.
+  url: https://openstax.org/details/books/organic-chemistry
+
+- id: openstax-physics
+  topics:
+    - general-physics
+  title: OpenStax Physics
+  brief: Introductory conceptual and quantitative physics resource.
+  url: https://openstax.org/details/books/physics
+
+- id: openstax-university-physics-volume-1
+  topics:
+    - university-physics-sequence
+  title: OpenStax University Physics Volume 1
+  brief: University-level physics volume 1.
+  url: https://openstax.org/details/books/university-physics-volume-1
+
+- id: openstax-university-physics-volume-2
+  topics:
+    - university-physics-sequence
+  title: OpenStax University Physics Volume 2
+  brief: University-level physics volume 2.
+  url: https://openstax.org/details/books/university-physics-volume-2
+
+- id: openstax-university-physics-volume-3
+  topics:
+    - university-physics-sequence
+  title: OpenStax University Physics Volume 3
+  brief: University-level physics volume 3.
+  url: https://openstax.org/details/books/university-physics-volume-3
+
+- id: draw-a-box
+  topics:
+    - perspective-construction
+    - observational-drawing
+  title: Draw A Box
+  brief: Structured drawing curriculum for perspective and foundational skills.
+  url: https://drawabox.com/
+
+- id: proko-youtube
+  topics:
+    - figure-drawing-anatomy
+  title: Proko YouTube Channel
+  brief: Figure drawing and anatomy lessons from Proko.
+  url: https://www.youtube.com/c/ProkoTV/videos
