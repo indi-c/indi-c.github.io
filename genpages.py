@@ -25,7 +25,7 @@ title: Free Learning - {title}
 ---
 '''
 
-color_one = "#fbf8f8"
+color_one = "#fbfbff"
 color_two = "#EBF1F7"
 
 # make a new file for each domain in _learning/ by the name of the domain id 
