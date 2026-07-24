@@ -130,6 +130,14 @@
       border-bottom: 1px solid #ddd;
     }
 
+    #free-learning-sidebar #sidebar-content {
+      display: none;
+    }
+
+    #free-learning-sidebar.sidebar-open #sidebar-content {
+      display: block;
+    }
+
     #free-learning-sidebar .menu-item {
       margin: 2px 0;
     }
@@ -180,12 +188,21 @@
     #free-learning-sidebar .sidebar-hint.mobile {
       display: none;
     }
+
+    #free-learning-sidebar.sidebar-collapsed {
+      flex: 0 0 50px;
+      overflow: hidden;
+    }
+
+    #free-learning-sidebar.sidebar-collapsed #sidebar-content {
+      display: none;
+    }
   }
 </style>
 
 <div id="free-learning-sidebar">
   <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-    <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;" onclick="document.getElementById('sidebar-content').style.display = document.getElementById('sidebar-content').style.display === 'none' ? 'block' : 'none'; document.getElementById('free-learning-sidebar').style.flex = document.getElementById('free-learning-sidebar').style.flex === '0 0 250px' ? '0 0 50px' : '0 0 250px';">&#9776;</button>
+    <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#9776;</button>
   </div>
 
   <div id="sidebar-content" style="display: block;">
@@ -229,6 +246,17 @@
     var sidebar = document.getElementById('free-learning-sidebar');
     if (!sidebar) {
       return;
+    }
+
+    var toggleBtn = document.getElementById('toggle-sidebar');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        if (window.innerWidth <= 900) {
+          sidebar.classList.toggle('sidebar-open');
+        } else {
+          sidebar.classList.toggle('sidebar-collapsed');
+        }
+      });
     }
 
     function setItemOpenState(item, isOpen) {
