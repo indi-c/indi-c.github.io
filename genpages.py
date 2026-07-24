@@ -40,7 +40,7 @@ for domain in domains:
 
     with open(f'_learning/{domain_id}.html', 'w') as f:
         f.write(html_template.format(title=domain_title))
-        f.write(f'{{% include freelearningtopictitle.html url="{domain_id}" title="{domain_title}" description="{domain["description"]}" %}}\n')
+        f.write(f'{{% include freelearningtopictitle.html title="{domain_title}" description="{domain["description"]}" %}}\n')
 
         for field in domain_fields:
             field_id = field['id']
@@ -61,7 +61,7 @@ for field in fields:
 
     with open(f'_learning/{field_domain}/{field_id}.html', 'w') as f:
         f.write(html_template.format(title=field_title))
-        f.write(f'{{% include freelearningtopictitle.html url="{field_id}" title="{field_title}" description="{field_description}" %}}\n')
+        f.write(f'{{% include freelearningtopictitle.html title="{field_title}" description="{field_description}" %}}\n')
         for topic in field_topics:
             topic_id = topic['id']
             topic_title = topic['title'].title() if topic['title'] != topic['title'].upper() else topic['title']
@@ -80,7 +80,7 @@ for topic in topics:
 
     with open(f'_learning/{topic_domain}/{topic_field}/{topic_id}.html', 'w') as f:
         f.write(html_template.format(title=topic_title))
-        f.write(f'{{% include freelearningtopictitle.html url="{topic_id}" title="{topic_title}" description="{topic_description}" %}}\n')
+        f.write(f'{{% include freelearningtopictitle.html title="{topic_title}" description="{topic_description}" %}}\n')
         for resource in topic_resources:
             resource_id = resource['id']
             resource_title = resource['title'].title() if resource['title'] != resource['title'].upper() else resource['title']
