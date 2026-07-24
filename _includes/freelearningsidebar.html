@@ -123,7 +123,7 @@
     line-height: 1.4;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 900px), (hover: none) and (pointer: coarse) {
     #free-learning-sidebar {
       flex: 0 0 100%;
       border-right: 0;
@@ -184,7 +184,7 @@
     }
   }
 
-  @media (min-width: 901px) {
+  @media (min-width: 901px) and (hover: hover) and (pointer: fine) {
     #free-learning-sidebar .sidebar-hint.mobile {
       display: none;
     }
@@ -202,10 +202,10 @@
 
 <div id="free-learning-sidebar">
   <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
-    <button id="toggle-sidebar" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#9776;</button>
+    <button id="toggle-sidebar" type="button" aria-label="Toggle learning navigation" aria-controls="sidebar-content" aria-expanded="false" style="background: none; border: none; font-size: 24px; cursor: pointer;">&#9776;</button>
   </div>
 
-  <div id="sidebar-content" style="display: block;">
+  <div id="sidebar-content">
     <h2 class="sidebar-title">Free Learning Resources</h2>
     <p class="sidebar-hint desktop" aria-hidden="true">Hover a domain to reveal topics in that field <span class="sidebar-hint-arrow">&#8250;</span></p>
     <p class="sidebar-hint mobile" aria-hidden="true">Tap <strong>+</strong> to expand each topic</p>
@@ -249,12 +249,15 @@
     }
 
     var toggleBtn = document.getElementById('toggle-sidebar');
+    var mobileQuery = window.matchMedia('(max-width: 900px), (hover: none) and (pointer: coarse)');
     if (toggleBtn) {
       toggleBtn.addEventListener('click', function () {
-        if (window.innerWidth <= 900) {
-          sidebar.classList.toggle('sidebar-open');
+        if (mobileQuery.matches) {
+          var isOpen = sidebar.classList.toggle('sidebar-open');
+          toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
         } else {
-          sidebar.classList.toggle('sidebar-collapsed');
+          var isCollapsed = sidebar.classList.toggle('sidebar-collapsed');
+          toggleBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
         }
       });
     }
