@@ -13,6 +13,8 @@ Particularly, I have the aim to assist in target 4.4, which is to by 2030 increa
 
 Additionally, I aim to assist in goal 8, the promotion of sustained, inclusive and sustainable economic growth, full and productive employment, and decent work for all. The target here I aim to assist in is 8.5, which is to by 2030 achieve full and productive employment and decent work for all women and men, including young people and those who are disabled.
 
+Currently, there is a lack of resources for many fields, which is something to be expanded on. A future full fledged version of this site would also allow for suggestions for content. It was chosen to not be a wiki due to the potential for low quality resources to be added, and to disallow site vandalism.
+
 ## Justification
 
 It has been found that MOOCs (Massive Open Online Courses) are successful in bridging the gap between skills graduates have and the skills employers expect. (Calonge and Shah, 2016).
