@@ -3,3 +3,9 @@
   title: HTML
   brief: Learn the basics of HTML, the standard markup language for creating web pages.
   description: HTML (HyperText Markup Language) is the standard markup language used to create web pages. It provides the structure and content of a webpage, allowing developers to define headings, paragraphs, links, images, and other elements. Understanding HTML is essential for anyone interested in web development, as it forms the foundation for building websites and web applications.
+
+- id: javascript
+  field: web
+  title: JavaScript
+  brief: Learn JavaScript, the programming language that enables dynamic web content.
+  description: JavaScript is a programming language that enables developers to create interactive and dynamic content on websites. It is widely used for front-end development, allowing developers to manipulate the Document Object Model (DOM), handle events, and create responsive user interfaces. JavaScript is also used server-side with technologies like Node.js, making it crucial for modern full-stack web development.

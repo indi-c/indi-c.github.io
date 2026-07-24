@@ -1,5 +1,11 @@
 - id: web
-  domain: programming
+  domain: cs
   title: web development
   brief: Learn how to build websites and web applications using HTML, CSS, JavaScript, and other web technologies.
   description: Web development is the process of creating websites and web applications. It involves a combination of programming languages, frameworks, and tools to build functional and visually appealing web experiences. This field covers both front-end development (what users see) and back-end development (server-side logic and databases).
+
+- id: cybersecurity
+  domain: cs
+  title: cybersecurity
+  brief: Learn how to protect systems, networks, and data from cyber threats and attacks.
+  description: Cybersecurity is the practice of protecting computer systems, networks, and data from unauthorized access, attacks, and damage. It involves implementing security measures, monitoring for threats, and responding to incidents to ensure the confidentiality, integrity, and availability of information.
